@@ -4,12 +4,9 @@ import joblib
 app = Flask(__name__)
 model = joblib.load('spam_detector_model.pkl')
 
-# Route for home page
 @app.route('/')
 def home():
     return render_template('index.html')
-
-# Route to handle form submission
 @app.route('/predict', methods=['POST'])
 def predict():
     if request.method == 'POST':
