@@ -6,4 +6,4 @@ prediction = model.predict([email])[0]
 if prediction == 1:
     print("🚨 This is a SPAM email.")
 else:
-    print("✅ This is a normal email.")
+    print("✅ This is a valid email.")
